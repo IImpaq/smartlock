@@ -1,0 +1,10 @@
+# Hidden folders
+.cadence/
+.idea/
+.venv/
+
+# Library
+verifier/
+
+# Temp files
+pairing_code.png
