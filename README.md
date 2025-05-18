@@ -5,17 +5,24 @@ A custom smartlock solution based on the Ping Pong protocol.
 TODO
 
 ## Requirements
-TODO
+```bash
+pip install -r requirements.txt
+```
 
-## Installation
-TODO
+## Setup
+```bash
+git clone git@github.com:IImpaq/ping-pong.git
+mv ping-pong/verifier/verifier verifier
+rm -rf ping-pong
+```
 
 ## Usage
-TODO
+```bash
+python -m src.main
+```
 
 ## License
 TODO
 
 ## Authors
 TODO
-
