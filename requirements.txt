@@ -1,0 +1,6 @@
+bleak
+bless
+cryptography
+keyring
+qrcode[pil]
+tkinter
