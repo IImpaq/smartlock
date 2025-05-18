@@ -8,3 +8,4 @@ verifier/
 
 # Temp files
 pairing_code.png
+__pycache__
