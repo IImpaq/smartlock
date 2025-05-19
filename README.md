@@ -12,13 +12,13 @@ pip install -r requirements.txt
 ## Setup
 ```bash
 git clone git@github.com:IImpaq/ping-pong.git
-mv ping-pong/verifier/verifier verifier
+mv ping-pong/verifier/verifier lock/verifier
 rm -rf ping-pong
 ```
 
 ## Usage
 ```bash
-python -m src.main
+python -m lock.main
 ```
 
 ## License

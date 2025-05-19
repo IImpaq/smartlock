@@ -4,7 +4,7 @@
 .venv/
 
 # Library
-verifier/
+lock/verifier/
 
 # Temp files
 pairing_code.png
