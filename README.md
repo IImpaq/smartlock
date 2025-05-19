@@ -18,7 +18,8 @@ rm -rf ping-pong
 
 ## Usage
 ```bash
-python -m lock.main
+cd lock
+python -m main
 ```
 
 ## License
