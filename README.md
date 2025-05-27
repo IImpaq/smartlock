@@ -22,10 +22,11 @@ rm -rf ping-pong
 ```
 
 ### Prover [*`key`*]
-Setup was already done and is implemented in the code for the Smartphone app. The setup requires an import of the prover
-library release under *git@github.com:IImpaq/ping-pong/prover*.
+*Setup was already done and is implemented in the code for the Smartphone app!*
 
-This was done by downloading the library release version 1.0.0 and placing it in *`key/app/libs`* where it is able to be used as a dependency in the build.gradle.kts file of the application with:
+The setup requires an import of the prover
+library release under [release_prover](https://github.com/IImpaq/ping-pong/releases/tag/release_prover).
+This is done by downloading the library version 1.0.0 and placing it in *`key/app/libs`* where it is able to be used as a dependency in the build.gradle.kts file of the application with:
 ```gradle
 implementation(files("libs/pingpongprover-release.aar"))
 ```
