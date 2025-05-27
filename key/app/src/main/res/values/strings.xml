@@ -1,0 +1,22 @@
+<resources>
+    <!-- App name -->
+    <string name="app_name">Smartlock Key</string>
+    <string name="invalid_qr_code">Invalid QR code</string>
+    <string name="scanner_error">Scanner error</string>
+    <string name="scan_qr_code">Scan the QR code from the verifier device</string>
+    <string name="scan_again">Scan Again</string>
+    <string name="scanning">Scanning for verifier...</string>
+    <string name="data_send_failed">Data has not been sent to Verifier. Restarting process...</string>
+    <string name="setup_complete">Setup complete! Authentication process done. Moving on...</string>
+    <string name="connected_verifier_id_label">ID:</string>
+    <string name="polling_distance">Polling proximity...</string>
+    <!-- For displaying RTT -->
+    <string name="status_unlockable">Unlockable (Close)</string>
+    <string name="status_getting_closer">Getting closer (Medium)</string>
+    <string name="status_too_far">Too far (Far)</string>
+    <string name="status_unknown_proximity">Proximity: Unknown</string>
+    <!-- Button will be there but not functional yet -->
+    <string name="bluetooth_status_error_connection">Bluetooth connection error.</string>
+    <string name="bluetooth_status_connected_polling">Connected. Polling proximity...</string>
+    <string name="communication_error_send">Send Error</string>
+</resources>
