@@ -63,17 +63,20 @@ class MainActivity : AppCompatActivity() {
     private fun checkAndRequestPermissions() {
         val requiredPermissions = mutableListOf<String>()
 
-        // Permissions (all Android versions)
+        // Camera is always required
         requiredPermissions.add(Manifest.permission.CAMERA)
-        requiredPermissions.add(Manifest.permission.ACCESS_FINE_LOCATION)
-        requiredPermissions.add(Manifest.permission.ACCESS_COARSE_LOCATION)
 
-        // Permissions based on Android version
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            // Android 12+ (API 31+): Need runtime Bluetooth permissions
+            // Android 12+ (API 31+): Only Bluetooth permissions
             requiredPermissions.add(Manifest.permission.BLUETOOTH_CONNECT)
             requiredPermissions.add(Manifest.permission.BLUETOOTH_SCAN)
             requiredPermissions.add(Manifest.permission.BLUETOOTH_ADVERTISE)
+        } else {
+            // Android 11 and below: Location and legacy Bluetooth permissions
+            requiredPermissions.add(Manifest.permission.ACCESS_FINE_LOCATION)
+            requiredPermissions.add(Manifest.permission.ACCESS_COARSE_LOCATION)
+            requiredPermissions.add(Manifest.permission.BLUETOOTH)
+            requiredPermissions.add(Manifest.permission.BLUETOOTH_ADMIN)
         }
 
         // Filter out already granted permissions
@@ -81,7 +84,6 @@ class MainActivity : AppCompatActivity() {
             ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
         }
 
-        // Request permissions if needed
         if (permissionsToRequest.isNotEmpty()) {
             ActivityCompat.requestPermissions(
                 this,
@@ -89,7 +91,6 @@ class MainActivity : AppCompatActivity() {
                 PERMISSION_REQUEST_CODE
             )
         } else {
-            // All permissions already granted
             setupNavigation()
         }
     }
