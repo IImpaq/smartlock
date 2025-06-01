@@ -1,10 +1,14 @@
-# Ping Pong Smartlock
-A custom smartlock solution based on the Ping Pong protocol.
+<h1 align="center">🗝 Ping Pong Smartlock 🗝</h1>
 
-## Features
-TODO
+A custom smart lock solution based on the Ping Pong protocol running on raspberry devices.
 
-## Requirements
+## ✨ Key Features
+- Support for multiple Keys
+- Fullscreen QR visualization
+- Simplistic QR authentication
+- Intuitive unlocking procedure
+
+## 📦 Requirements
 ### Verifier [*`lock`*]
 ```bash
 pip install -r requirements.txt
@@ -13,7 +17,7 @@ pip install -r requirements.txt
 ### Prover [*`key`*]
 Minimum Android SDK version of Android 11 is required.
 
-## Setup
+## 🖥 Setup
 ### Verifier [*`lock`*]
 ```bash
 git clone git@github.com:IImpaq/ping-pong.git
@@ -31,7 +35,7 @@ This is done by downloading the library version 1.0.0 and placing it in *`key/ap
 implementation(files("libs/pingpongprover-release.aar"))
 ```
 
-## Usage
+## ⚙ Usage
 ### Verifier [*`lock`*]
 ```bash
 cd lock
@@ -41,8 +45,16 @@ python -m main
 ### Prover [*`key`*]
 The **`key`** project can simply be opened in Android Studio and loaded onto a physical smartphone device with Android 11 or higher via developer mode USB debugging, or by using the built-in device emulation. The code should compile and build out of the box.
 
-## License
-TODO
+## 🧠 Team & Roles
+- **Christian Burtscher:** Prover rapid prototyping
+- **Marcus Gugacs:** Verifier rapid prototyping
+- **Tobias Marehart:** Testing/Debugging & Enhancements
 
-## Authors
-TODO
+## 📝 License
+MIT License (see [LICENSE](LICENSE.md)).
+
+## 📞 Contact
+If you have any questions or want to get in touch, just [send an email](mailto:iimpaq@proton.me)
+
+---
+Made with 💛
