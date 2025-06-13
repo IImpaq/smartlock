@@ -16,7 +16,11 @@ def display_fullscreen_qr(qr_img):
 
   root.bind("<Escape>", close_window)
 
-  tk_photo_image = ImageTk.PhotoImage(qr_img)
+  root.update_idletasks()
+  max_size = min(root.winfo_width() or 800, root.winfo_height() or 600)
+
+  qr_img_resized = qr_img.resize((max_size, max_size), Image.Resampling.LANCZOS)
+  tk_photo_image = ImageTk.PhotoImage(qr_img_resized)
 
   image_label = tk.Label(root, image=tk_photo_image)
   image_label.image = tk_photo_image # keep reference to avoid issues
